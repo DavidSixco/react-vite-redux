@@ -8,3 +8,7 @@ export type IconsProps = {
     icon: IconType;
     color?: GlobalColor,
 };
+
+export type MainProps = {
+    children: JSX.Element
+}
