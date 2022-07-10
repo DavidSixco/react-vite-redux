@@ -21,13 +21,15 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
       "@root/*": [
         "src/*"
       ],
-      // "@hooks/*": ["src/hooks/*"],
+      "@layout/*": [
+        "src/layout/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
       "@components/*": [
         "src/components/*"
       ],
