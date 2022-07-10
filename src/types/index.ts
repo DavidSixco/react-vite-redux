@@ -3,3 +3,7 @@ export interface IRouter {
     name: String,
     icon: String,
 };
+
+export interface ISliderBar{
+    collapsed:boolean
+}
