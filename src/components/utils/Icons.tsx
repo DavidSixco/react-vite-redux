@@ -1,10 +1,8 @@
 import { ReactElement } from 'react';
 import { IconType, GlobalColor } from '../../enum';
+import { IconsProps } from '../../types/props-types';
 
-type IconsProps = {
-    icon: IconType;
-    color?: GlobalColor,
-};
+
 
 const Icons = ({ icon, color = GlobalColor.Primary }: IconsProps): ReactElement => {
 
