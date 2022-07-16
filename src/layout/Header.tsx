@@ -11,7 +11,7 @@ const Header = () => {
   );
 
   return (
-    <Wrapper id="header">
+    <Wrapper id="header-app-ds">
       <div className="header-container">
         <div className="logo-project">
           <img
@@ -38,7 +38,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
-  height: 4rem;
+  height: 3rem;
   box-shadow: 0px 0px 3px 0px gainsboro;
   padding: 0.5rem 2rem 0.5rem 2rem;
   .header-container {

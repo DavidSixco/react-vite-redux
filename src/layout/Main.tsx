@@ -15,10 +15,12 @@ const Main = ({ children, page }: MainProps): ReactElement => {
         toggleCollapsed={() => setCollapsed(!collapsed)}
         page={page}
       />
-      <div className="container-main">
-        <Header />
-        <div className="container-page">{children}</div>
-        <Footer />
+      <div className="content">
+        <div className="content-main">
+          <Header />
+          <div className="content-page">{children}</div>
+          <Footer />
+        </div>
       </div>
     </StyledMain>
   );
@@ -27,16 +29,14 @@ const StyledMain = styled.main<ISliderBar>`
   display: flex;
   flex-direction: row;
   & .content {
-    /* width: calc(100vw - 4rem); */
     transition: width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
     width: ${({ collapsed }) => (collapsed ? 'calc(100vw - 10rem)' : 'calc(100vw - 4rem)')};
     & .content-main {
       display: flex;
-      flex-direction: row;
-      margin-top: 2px;
-      margin-right: 10px;
-      & .page {
+      flex-direction: column;
+      & .content-page {
         width: 100%;
+        height: calc(100vh - 6rem);
         display: flex;
         flex-direction: column;
         align-items: center;
