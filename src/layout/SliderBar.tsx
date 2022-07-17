@@ -1,8 +1,8 @@
 import Icons from '@root/components/utils/Icons';
 import { MainRoutes } from '@root/configuration/MainRoutes';
 import { GlobalColor, IconType } from '@root/enum';
-import { IRouter, ISliderBar } from '@root/types';
 import { SliderBarProps } from '@root/types/props-types';
+import { ISliderBar } from '@root/types/styled-components-props';
 import type { MenuProps } from 'antd';
 import { Button, Menu } from 'antd';
 import React, { useState } from 'react';

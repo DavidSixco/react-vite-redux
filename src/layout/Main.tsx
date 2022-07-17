@@ -1,5 +1,5 @@
-import { ISliderBar } from '@root/types';
 import { MainProps } from '@root/types/props-types';
+import { ISliderBar } from '@root/types/styled-components-props';
 import { ReactElement, useState } from 'react';
 import styled from 'styled-components';
 import Footer from './Footer';

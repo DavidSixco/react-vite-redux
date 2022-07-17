@@ -5,7 +5,3 @@ export interface IRouter {
   name: String;
   icon: IconType;
 }
-
-export interface ISliderBar {
-  collapsed: boolean;
-}
