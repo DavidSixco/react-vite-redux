@@ -1,13 +1,11 @@
-import Main from "@root/layout/Main";
+import Layout from '@root/layout/Main';
 
-const Index = () => {
+const Home = () => {
   return (
-    <Main>
-      <div>
-        Index Home
-      </div>
-    </Main>
-  )
+    <Layout>
+      <div>Home Home</div>
+    </Layout>
+  );
 };
 
-export default Index;
+export default Home;

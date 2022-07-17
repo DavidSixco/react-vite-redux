@@ -1,10 +1,11 @@
+import Layout from '@root/layout/Main';
 
-const Index = () => {
+const Administration = () => {
   return (
-    <div>
-      Index Administration
-    </div>
-  )
-}
+    <Layout>
+      <div>Administration Administration</div>
+    </Layout>
+  );
+};
 
-export default Index
+export default Administration;

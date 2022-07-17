@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment, incrementByAmount } from './store/slices/counter/counterSlice';
 import { RootState } from './store/store';
-import './App.css'
 import { getPoke } from './store/slices/auth/thunks';
 import { useGetPlaceHolderQuery, useGetTodoByIdQuery } from './store/apis/RTKQuery';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '@pages/home';
+import Login from '@pages/login';
+import Administration from '@pages/administration';
+import About from '@pages/about';
 
 const App = () => {
   const [id, setId] = useState(1);
@@ -21,80 +25,52 @@ const App = () => {
   }, [stateAuth]);
   console.log(todo, '=======');
 
-
-
   return (
-
-
     <div>
-      ContadorRRRRRRR
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/administration" element={<Administration />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+      {/* ContadorRRRRRRR
       <br />
       <br />
-
       {state.counter}
-      <div className='container-buttons'>
-        <button type='button' onClick={() => dispatch(increment())}>
+      <div className="container-buttons">
+        <button type="button" onClick={() => dispatch(increment())}>
           Incrementar
         </button>
-        <button type='button' onClick={() => dispatch(decrement())}>
+        <button type="button" onClick={() => dispatch(decrement())}>
           Disminuir
         </button>
-        <button type='button' onClick={() => dispatch(incrementByAmount(2))}>
+        <button type="button" onClick={() => dispatch(incrementByAmount(2))}>
           Por dos
         </button>
-        {/* <button type='button' onClick={() => dispatch(getPoke())} >
-          {stateAuth.response.isLoading && (
-            <>
-              loading..........
-            </>
-          )}
-          silcessssss
-        </button> */}
       </div>
-
-      {
-        stateAuth.response.isSuccess && (
-          stateAuth.response.data.map((item: any, index: number) => (
-            <div key={index} className='card'>
-              <div className='item'>
-                <label>
-                  Nombre:
-                </label>
-                {'  '}
-                <label>
-                  {item?.name}
-                </label>
-              </div>
+      {stateAuth.response.isSuccess &&
+        stateAuth.response.data.map((item: any, index: number) => (
+          <div key={index} className="card">
+            <div className="item">
+              <label>Nombre:</label>
+              {'  '}
+              <label>{item?.name}</label>
             </div>
-          ))
-        )
-      }
-
-      <div> 
-        <h3>
-          RTK QUERY
-        </h3>
+          </div>
+        ))}
+      <div>
+        <h3>RTK QUERY</h3>
 
         <pre>{isLoading ? 'Loadinnnnnnggggggg' : JSON.stringify(todo)}</pre>
 
-        {/* <ul>
-          {todos.map((todo: any) => (
-            <li key={todo.id}>
-              <strong> {todo.completed ? 'DONE' : 'Pending'} </strong>
-              {todo.title}
-            </li>
-          ))}
-        </ul> */}
-        <button onClick={() => setId(id + 1)}>
-          Next
-        </button>
-        <button onClick={() => setId(id - 1)}>
-          Back
-        </button>
-      </div>
+        
+        <button onClick={() => setId(id + 1)}>Next</button>
+        <button onClick={() => setId(id - 1)}>Back</button>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

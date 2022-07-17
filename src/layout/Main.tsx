@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Header from './Header';
 import SliderBar from './SliderBar';
 
-const Main = ({ children, page }: MainProps): ReactElement => {
+const Layout = ({ children, page }: MainProps): ReactElement => {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <StyledMain collapsed={collapsed}>
@@ -47,4 +47,4 @@ const StyledMain = styled.main<ISliderBar>`
   }
 `;
 
-export default Main;
+export default Layout;
