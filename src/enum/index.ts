@@ -3,6 +3,9 @@ export enum IconType {
   Login = 'LOGIN',
   MenuOpen = 'MENU_OPEN',
   MenuClose = 'MENU_CLOSE',
+  AdminPanel = 'ADMIN_PANEL',
+  Category = 'CATEGORY',
+  Home = 'HOME',
 }
 
 export enum GlobalColor {
