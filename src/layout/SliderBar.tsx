@@ -20,8 +20,6 @@ const items: MenuItem[] = MainRoutes.map((router): MenuItem => {
   } as MenuItem;
 });
 
-console.log(items, 'itemsitemsitemsitemsitemsitems');
-
 const SliderBar: React.FC<SliderBarProps> = ({ collapsed, toggleCollapsed, page }) => {
   //#205375 primary
   //back #EFEFEF
