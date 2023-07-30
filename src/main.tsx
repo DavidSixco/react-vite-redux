@@ -5,7 +5,6 @@ import './main.css';
 import 'antd/dist/antd.css';
 import { Provider } from 'react-redux';
 import { store } from '@store/store';
-// import Home from '@pages/home';
 import Authentication from '@configuration/Authentication';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
       <Authentication>
         <App />
-        {/* <Home /> */}
       </Authentication>
     </Provider>
   </React.StrictMode>,
